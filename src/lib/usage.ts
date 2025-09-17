@@ -3,20 +3,41 @@ import { prisma } from './db';
 import { auth } from '@clerk/nextjs/server';
 
 const FREE_POINTS = 5;
-const PRO_POINTS = 100;
+const BASIC_POINTS = 100;
+const STANDARD_POINTS = 200;
+const ENTERPRISE_POINTS = 500;
 const FREE_DURATION = 1 * 24 * 60 * 60; // 1 day in seconds
 const PRO_DURATION = 30 * 24 * 60 * 60; // 30 days (1 month) in seconds
-const GENERATION_COST = 2;
+const GENERATION_COST = 1;
 
 export async function getUsageTracker() {
     const { has } = await auth()
-    const hasProAccess = has({ plan: "pro" })
+
+    // Check for different plan types
+    const hasBasicAccess = has({ plan: "basic" })
+    const hasStandardAccess = has({ plan: "standard" })
+    const hasEnterpriseAccess = has({ plan: "enterprise" })
+
+    // Determine points based on plan
+    let points = FREE_POINTS;
+    let duration = FREE_DURATION;
+
+    if (hasEnterpriseAccess) {
+        points = ENTERPRISE_POINTS;
+        duration = PRO_DURATION;
+    } else if (hasStandardAccess) {
+        points = STANDARD_POINTS;
+        duration = PRO_DURATION;
+    } else if (hasBasicAccess) {
+        points = BASIC_POINTS;
+        duration = PRO_DURATION;
+    }
 
     const usageTracker = new RateLimiterPrisma({
         storeClient: prisma,
         tableName: "Usage",
-        points: hasProAccess ? PRO_POINTS : FREE_POINTS,
-        duration: hasProAccess ? PRO_DURATION : FREE_DURATION,
+        points: points,
+        duration: duration,
     });
     return usageTracker;
 };

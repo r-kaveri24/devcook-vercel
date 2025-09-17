@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { useSignIn } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image'
-import logo from "@/assets/logo@4x.png"
 
 export default function CustomSignIn() {
   const { isLoaded, signIn, setActive } = useSignIn();
@@ -65,6 +64,17 @@ export default function CustomSignIn() {
             <p className="text-red-400 text-sm">{error}</p>
           </div>
         )}
+        {/* Captcha Section */}
+        <div className="mb-6">
+          {/* Your captcha component would go here */}
+          <div className="flex justify-center">
+            {/* Example captcha placeholder */}
+            <div className="bg-gray-800 border border-gray-600 rounded-lg p-4 w-full">
+              {/* Captcha widget */}
+            </div>
+          </div>
+        </div>
+
 
         {/* Social Login Buttons */}
         <div className=" md:space-y-3 flex flex-col md:flex-row items-center  gap-5">
