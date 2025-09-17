@@ -1,0 +1,17 @@
+# This is a config for E2B sandbox template.
+# You can use template ID (ck5htd1r47erp5sve5vz) or template name (devcook-nextjs-test-2) to create a sandbox:
+
+# Python SDK
+# from e2b import Sandbox, AsyncSandbox
+# sandbox = Sandbox("devcook-nextjs-test-2") # Sync sandbox
+# sandbox = await AsyncSandbox.create("devcook-nextjs-test-2") # Async sandbox
+
+# JS SDK
+# import { Sandbox } from 'e2b'
+# const sandbox = await Sandbox.create('devcook-nextjs-test-2')
+
+team_id = "be8b5f1c-e7e3-45fe-833b-8f32facba04b"
+start_cmd = "/compile_page.sh"
+dockerfile = "e2b.Dockerfile"
+template_name = "devcook-nextjs-test-2"
+template_id = "ck5htd1r47erp5sve5vz"

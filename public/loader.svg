@@ -1,0 +1,48 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer ring -->
+  <circle cx="40" cy="40" r="35" stroke="#ec4899" stroke-width="2" fill="none" opacity="0.8">
+    <animate attributeName="stroke-dasharray" values="0 220;110 110;220 0" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-dashoffset" values="0;-110;-220" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Static center elements -->
+  <!-- Chef's hat -->
+  <path d="M30 35 Q30 30 35 30 Q40 28 45 30 Q50 30 50 35 Q50 38 45 38 L35 38 Q30 38 30 35 Z" fill="#3b82f6" opacity="0.9"/>
+  <rect x="32" y="38" width="16" height="8" fill="#3b82f6" opacity="0.9" rx="1"/>
+  
+  <!-- Cooking utensils -->
+  <g opacity="0.8">
+    <!-- Fork (left) -->
+    <line x1="28" y1="32" x2="28" y2="38" stroke="#ec4899" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="26" y1="32" x2="26" y2="36" stroke="#ec4899" stroke-width="1" stroke-linecap="round"/>
+    <line x1="30" y1="32" x2="30" y2="36" stroke="#ec4899" stroke-width="1" stroke-linecap="round"/>
+    
+    <!-- Spoon (right) -->
+    <ellipse cx="52" cy="33" rx="2" ry="3" fill="#ec4899"/>
+    <line x1="52" y1="36" x2="52" y2="42" stroke="#ec4899" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Animated steam bubbles -->
+  <circle cx="35" cy="25" r="1" fill="#3b82f6" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="1.5s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="40" cy="22" r="1.5" fill="#ec4899" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="1.5s" begin="0.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="45" cy="25" r="1" fill="#3b82f6" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="1.5s" begin="0.6s" repeatCount="indefinite"/>
+  </circle>
+  
+
+  <!-- Small orbiting dots -->
+  <g transform-origin="40 40">
+    <animateTransform attributeName="transform" type="rotate" values="360 40 40;0 40 40" dur="4s" repeatCount="indefinite"/>
+    <circle cx="40" cy="15" r="1.5" fill="#3b82f6" opacity="0.7"/>
+    <circle cx="65" cy="40" r="1.5" fill="#ec4899" opacity="0.6"/>
+    <circle cx="40" cy="65" r="1.5" fill="#3b82f6" opacity="0.6"/>
+    <circle cx="15" cy="40" r="1.5" fill="#ec4899" opacity="0.5"/>
+  </g>
+</svg>
