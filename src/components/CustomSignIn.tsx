@@ -65,7 +65,7 @@ export default function CustomSignIn() {
           </div>
         )}
         {/* Captcha Section */}
-        <div className="mb-6">
+        <div className="mb-6 hidden">
           {/* Your captcha component would go here */}
           <div className="flex justify-center">
             {/* Example captcha placeholder */}
