@@ -10,13 +10,13 @@ const Page = () => {
       <section className="space-y-6 py-[16vh]  2xl:py-48">
         <div className="flex items-center justify-center gap-4">
           <Image
-            src="/cookdev_logo.png"
-            alt="Devcook"
-            width={50}
-            height={50}
-            className="hidden md:block"
+            src='/betalogo.png'
+            alt='DevCook logo'
+            width={200}
+            height={60}
+            className="opacity-80 object-contain"
+            priority
           />
-          <span className="text-2xl md:text-3xl font-bold">DevCook</span>
         </div>
         <h1 className="text-2xl md:text-5xl font-bold text-center">Cook recipe with DevCook</h1>
         <p className="text-lg mg:text-xl text-muted-foreground text-center">Create apps and website by chatting with Ai</p>

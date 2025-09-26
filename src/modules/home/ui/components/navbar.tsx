@@ -17,8 +17,15 @@ export const Navbar = () => {
             <div className="container mx-auto flex justify-between items-center">
                 <div className="max-w-5xl mx-auto w-full flex justify-between items-center">
                     <Link href="/" className="flex items-center gap-2">
-                        <Image src='/cookdev_logo.png' alt="logo" width={24} height={24} />
-                        <span className='text-lg font-semibold'>DEVCOOK</span>
+                        {/* <Image src='/cookdev_logo.png' alt="logo" width={24} height={24} />
+                        <span className='text-lg font-semibold'>DEVCOOK</span> */}
+                        <Image
+                            src='/betalogo.png'
+                            alt='DevCook logo'
+                            width={120}
+                            height={24}
+                            className="opacity-80"
+                        />
                     </Link>
                     <SignedIn>
                         <UserControl showName={true} />

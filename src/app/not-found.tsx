@@ -13,14 +13,21 @@ export default function NotFound() {
       <div className="text-center space-y-8 max-w-md mx-auto px-4">
         {/* Logo and Brand */}
         <div className="flex justify-center items-center gap-3 mb-8">
-          <Image 
+          {/* <Image 
             src='/cookdev_logo.png' 
             alt='DevCook logo' 
             width={60} 
             height={60} 
             className="opacity-80"
           />
-          <span className="text-2xl font-semibold text-foreground">DevCook</span>
+          <span className="text-2xl font-semibold text-foreground">DevCook</span> */}
+          <Image
+            src='/betalogo.png'
+            alt='DevCook logo'
+            width={150}
+            height={60}
+            className="opacity-80"
+          />
         </div>
 
         {/* 404 Message */}
@@ -28,7 +35,7 @@ export default function NotFound() {
           <h1 className="text-6xl font-bold text-primary">404</h1>
           <h2 className="text-2xl font-semibold text-foreground">Recipe Not Found</h2>
           <p className="text-muted-foreground text-base leading-relaxed">
-            Looks like this page got burned in the kitchen! 
+            Looks like this page got burned in the kitchen!
             The recipe you're looking for doesn't exist or has been moved.
           </p>
         </div>
@@ -48,9 +55,8 @@ export default function NotFound() {
         </div>
 
         {/* Theme-aware decorative element */}
-        <div className={`mt-12 text-xs text-muted-foreground ${
-          currentTheme === 'dark' ? 'opacity-50' : 'opacity-70'
-        }`}>
+        <div className={`mt-12 text-xs text-muted-foreground ${currentTheme === 'dark' ? 'opacity-50' : 'opacity-70'
+          }`}>
           🍳 Let's cook up something amazing instead!
         </div>
       </div>

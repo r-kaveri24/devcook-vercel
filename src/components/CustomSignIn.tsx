@@ -45,8 +45,17 @@ export default function CustomSignIn() {
       {/* Logo */}
       <div className="flex  justify-center mb-4">
         <div className="flex items-center space-x-2">
-          <Image src='/cookdev_logo.png' alt="logo" width={50} height={50} />
-          <span className='text-3xl font-bold'>DEVCOOK</span>
+          {/* <Image src='/cookdev_logo.png' alt="logo" width={50} height={50} />
+          <span className='text-3xl font-bold'>DEVCOOK</span> */}
+
+          <Image
+            src='/betalogo.png'
+            alt='DevCook logo'
+            width={200}
+            height={60}
+            className="opacity-80 object-contain"
+            priority
+          />
         </div>
       </div>
 
